@@ -3,6 +3,10 @@
       <p v-if="isConfirmed">Запись подтверждена!</p>
       <p v-else>Запись ожидает подтверждения</p>
       <button @click="toggleStatus">Переключить статус</button>
+
+      <div v-show="isConfirmed" >
+      <p> Запись подтверждена!</p>
+    </div>
     </div>
   </template>
   
@@ -14,5 +18,7 @@
   function toggleStatus() {
     isConfirmed.value = !isConfirmed.value;
   }
+
+
   </script>
   
